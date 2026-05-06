@@ -312,6 +312,33 @@ a {
   opacity: 0.8;
 }
 
+/* ── Full-bleed override – strips the cinematic card container ── */
+.homepage-cinematic-content > section.full-bleed-band {
+  margin-top: 0 !important;
+  border: none !important;
+  background: transparent !important;
+  backdrop-filter: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+.homepage-cinematic-content > section.full-bleed-band::before,
+.homepage-cinematic-content > section.full-bleed-band::after {
+  display: none !important;
+}
+
+/* Stats band: dark floor gradient */
+.stats-band {
+  background: linear-gradient(180deg, rgba(5,5,5,0.72) 0%, rgba(8,8,8,0.88) 50%, rgba(5,5,5,0.72) 100%);
+}
+
+/* Global impact dot-grid overlay */
+.impact-dot-grid {
+  background-image: radial-gradient(rgba(255,255,255,0.12) 1px, transparent 1px);
+  background-size: 32px 32px;
+  mask-image: radial-gradient(ellipse 90% 80% at 50% 50%, black 30%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 90% 80% at 50% 50%, black 30%, transparent 100%);
+}
+
 .homepage-cinematic-content > section {
   position: relative;
   z-index: 10;

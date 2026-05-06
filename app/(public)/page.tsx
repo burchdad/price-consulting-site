@@ -90,63 +90,84 @@ export default async function HomePage() {
         </Section>
       </section>
 
-      <Section className="py-12 lg:py-14">
+      {/* ── METRICS BAND – full-bleed, no card containers ──────────────────── */}
+      <section className="full-bleed-band stats-band relative overflow-hidden">
+        <div aria-hidden className="pointer-events-none absolute inset-0">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_120%_100%_at_50%_50%,rgba(255,43,43,0.07),transparent_65%)]" />
+        </div>
+        {/* top accent line */}
+        <div aria-hidden className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-red-500/50 to-transparent" />
+
         <Reveal staggerChildren>
-          <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-6">
+          <div className="relative grid grid-cols-2 divide-x divide-white/[0.07] sm:grid-cols-3 xl:grid-cols-6">
             {metrics.map((item, index) => (
               <Reveal key={item.label} delay={0.05 + index * 0.04}>
-                <article className="kpi-card group rounded-xl border border-white/10 bg-gradient-to-b from-white/[0.05] to-white/[0.01] p-4 transition duration-300 hover:-translate-y-1 hover:scale-[1.015] hover:border-red-500/40 hover:shadow-[0_0_24px_rgba(255,43,43,0.12)]">
-                  <span className="kpi-sweep" />
-                  <p className="text-[11px] uppercase tracking-[0.14em] text-zinc-400">
+                <div className="group flex flex-col items-center px-4 py-12 text-center">
+                  <p className="text-[10px] uppercase tracking-[0.22em] text-zinc-500">
                     {item.label}
                   </p>
-                  <p className="mt-3 text-4xl font-black tracking-tight text-white">
+                  <p className="mt-3 text-5xl font-black tracking-tight text-white transition duration-300 group-hover:text-red-300 lg:text-6xl">
                     <AnimatedCounter
                       value={item.value}
                       prefix={item.prefix}
                       suffix={item.suffix}
                     />
                   </p>
-                  <p className="mt-2 text-[10px] uppercase tracking-[0.18em] text-zinc-500">
+                  <p className="mt-2 text-[9px] uppercase tracking-[0.2em] text-zinc-600">
                     {item.meta}
                   </p>
-                </article>
+                </div>
               </Reveal>
             ))}
           </div>
         </Reveal>
-      </Section>
 
-      <Section className="floating-panel grid gap-8 py-12 lg:grid-cols-2 lg:py-14" id="global-impact">
-        <Reveal className="h-full">
-          <p className="text-xs uppercase tracking-[0.2em] text-red-400">
-            {siteConfig.globalImpact.eyebrow}
-          </p>
-          <h2 className="mt-3 text-4xl font-black uppercase leading-tight">
-            {siteConfig.globalImpact.headline}
-          </h2>
-          <p className="mt-4 max-w-xl text-zinc-300">
-            {siteConfig.globalImpact.body}
-          </p>
-          <div className="mt-6 grid gap-3 sm:grid-cols-3">
-            {siteConfig.globalImpact.stats.map(({ label, value }) => (
-              <div
-                key={label}
-                className="rounded-lg border border-white/10 bg-black/40 p-3"
-              >
-                <p className="text-2xl font-black text-white">{value}</p>
-                <p className="text-xs uppercase tracking-[0.12em] text-zinc-400">
-                  {label}
-                </p>
-              </div>
-            ))}
-          </div>
-        </Reveal>
+        {/* bottom divider line */}
+        <div aria-hidden className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+      </section>
 
-        <Reveal delay={0.05} className="h-full">
-          <OperationalGraph />
-        </Reveal>
-      </Section>
+      {/* ── GLOBAL IMPACT – full-bleed dark panel ─────────────────────────── */}
+      <section className="full-bleed-band relative overflow-hidden py-20 lg:py-28" id="global-impact">
+        {/* Layered backgrounds */}
+        <div aria-hidden className="pointer-events-none absolute inset-0">
+          <div className="absolute inset-0 bg-gradient-to-br from-black via-zinc-950/90 to-red-950/20" />
+          {/* subtle dot grid */}
+          <div className="impact-dot-grid absolute inset-0 opacity-[0.35]" />
+          {/* red atmospheric glow on graph side */}
+          <div className="absolute right-0 top-0 h-full w-1/2 bg-[radial-gradient(ellipse_at_75%_50%,rgba(255,43,43,0.14),transparent_60%)]" />
+        </div>
+
+        <div className="relative mx-auto grid max-w-screen-xl gap-12 px-6 lg:grid-cols-2 lg:items-center xl:gap-20 xl:px-16">
+          <Reveal>
+            <p className="text-xs uppercase tracking-[0.2em] text-red-400">
+              {siteConfig.globalImpact.eyebrow}
+            </p>
+            <h2 className="mt-3 text-4xl font-black uppercase leading-tight lg:text-5xl">
+              {siteConfig.globalImpact.headline}
+            </h2>
+            <p className="mt-4 max-w-xl text-zinc-300">
+              {siteConfig.globalImpact.body}
+            </p>
+            <div className="mt-8 grid gap-3 sm:grid-cols-3">
+              {siteConfig.globalImpact.stats.map(({ label, value }) => (
+                <div
+                  key={label}
+                  className="rounded-lg border border-white/10 bg-black/50 p-4"
+                >
+                  <p className="text-3xl font-black text-white">{value}</p>
+                  <p className="mt-1 text-[10px] uppercase tracking-[0.16em] text-zinc-400">
+                    {label}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </Reveal>
+
+          <Reveal delay={0.06} className="min-h-[420px]">
+            <OperationalGraph />
+          </Reveal>
+        </div>
+      </section>
 
       <Section className="relative py-12 lg:py-14" id="who-we-are">
         <div className="absolute inset-0 rounded-2xl border border-white/5 bg-[linear-gradient(120deg,rgba(255,43,43,0.08),transparent_35%)]" />
