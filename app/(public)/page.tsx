@@ -18,35 +18,36 @@ export default async function HomePage() {
       <section className="relative isolate border-b border-white/10">
         <div className="absolute inset-0 bg-gradient-to-b from-black/48 via-black/70 to-black/32" />
 
-        <Section className="relative z-10 py-20 lg:py-24">
-          {/* Intelligence Rail – vertical ambient ticker beside hero content */}
-          <div
-            aria-hidden
-            className="intelligence-rail-shell absolute inset-y-10 left-1 z-20 hidden w-18 overflow-hidden rounded-r-md md:block lg:left-2"
-          >
-            <div className="intelligence-rail-line" />
-            <div className="intelligence-rail-track flex flex-col">
-              {[
-                "Technical",
-                "Alignment",
-                "Delivery",
-                "Outcomes",
-                "Technical",
-                "Alignment",
-                "Delivery",
-                "Outcomes",
-              ].map((phrase, i) => (
-                <div key={i} className="intelligence-rail-slot">
-                  <span className="intelligence-rail-item whitespace-nowrap text-[11px] font-medium uppercase">
-                    {phrase}
-                  </span>
-                </div>
-              ))}
-            </div>
+        {/* Intelligence Rail – sits on the viewport left edge, outside the content container */}
+        <div
+          aria-hidden
+          className="intelligence-rail-shell pointer-events-none absolute inset-y-0 left-0 z-20 hidden w-12 xl:block"
+        >
+          <div className="intelligence-rail-line" />
+          <div className="intelligence-rail-track flex h-full flex-col">
+            {[
+              "Technical",
+              "Alignment",
+              "Delivery",
+              "Outcomes",
+              "Technical",
+              "Alignment",
+              "Delivery",
+              "Outcomes",
+            ].map((phrase, i) => (
+              <div key={i} className="intelligence-rail-slot">
+                <span className="intelligence-rail-item whitespace-nowrap text-[10px] font-medium uppercase">
+                  {phrase}
+                </span>
+              </div>
+            ))}
           </div>
+        </div>
+
+        <Section className="relative z-10 py-20 lg:py-24">
 
           <Reveal>
-            <div className="hero-parallax-group max-w-5xl pl-12 md:pl-18 lg:pl-24">
+            <div className="hero-parallax-group max-w-5xl">
               <div className="hero-hud-grid" />
               <p className="text-xs font-semibold uppercase tracking-[0.34em] text-red-400">
                 {siteConfig.hero.eyebrow}
