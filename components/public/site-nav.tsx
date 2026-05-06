@@ -12,7 +12,6 @@ const navItems = [
   { href: "/services", label: "Services" },
   { href: "/case-studies", label: "Case Studies" },
   { href: "/contracts", label: "Contracts" },
-  { href: "/careers", label: "Careers" },
   { href: "/contact", label: "Contact" },
   { href: "/privacy", label: "Privacy Policy" },
 ];
