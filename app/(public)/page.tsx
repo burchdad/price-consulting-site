@@ -4,6 +4,7 @@ import { Section } from "@/components/ui/section";
 import { AnimatedCounter } from "@/components/public/animated-counter";
 import { Reveal } from "@/components/public/reveal";
 import { HomepageCinematicScene } from "@/components/public/homepage-cinematic-scene";
+import { OperationalGraph } from "@/components/public/operational-graph";
 import { getPublishedData } from "@/lib/site-data";
 import { siteConfig } from "@/lib/config/site";
 import { timeline } from "@/lib/data/timeline";
@@ -115,39 +116,7 @@ export default async function HomePage() {
         </Reveal>
 
         <Reveal delay={0.05} className="h-full">
-          <div className="floating-panel relative p-5">
-            <div className="absolute inset-0 rounded-[1.5rem] bg-[linear-gradient(to_right,rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:24px_24px]" />
-            <div className="absolute inset-0 rounded-2xl bg-[radial-gradient(circle_at_70%_20%,rgba(255,43,43,0.22),transparent_36%)]" />
-            <svg viewBox="0 0 600 320" className="relative h-full w-full">
-              <circle cx="130" cy="120" r="6" fill="#ff2b2b" />
-              <circle cx="250" cy="90" r="6" fill="#ff2b2b" />
-              <circle cx="380" cy="130" r="6" fill="#ff2b2b" />
-              <circle cx="460" cy="200" r="6" fill="#ff2b2b" />
-              <circle cx="310" cy="230" r="6" fill="#ff2b2b" />
-              <path
-                d="M130 120 L250 90 L380 130 L460 200"
-                stroke="rgba(255,255,255,0.45)"
-                strokeWidth="1.4"
-                fill="none"
-              />
-              <path
-                d="M250 90 L310 230 L460 200"
-                stroke="rgba(255,43,43,0.55)"
-                strokeWidth="1.2"
-                fill="none"
-                strokeDasharray="4 4"
-              />
-              <ellipse
-                cx="300"
-                cy="165"
-                rx="220"
-                ry="95"
-                stroke="rgba(255,255,255,0.18)"
-                strokeWidth="1"
-                fill="none"
-              />
-            </svg>
-          </div>
+          <OperationalGraph />
         </Reveal>
       </Section>
 
