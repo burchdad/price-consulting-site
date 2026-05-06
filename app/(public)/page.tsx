@@ -22,23 +22,24 @@ export default async function HomePage() {
           {/* Intelligence Rail – vertical ambient ticker beside hero content */}
           <div
             aria-hidden
-            className="absolute inset-y-8 left-0 z-20 hidden w-14 overflow-hidden rounded-r-md border-r border-white/20 bg-gradient-to-b from-black/35 via-black/10 to-black/35 md:block"
+            className="intelligence-rail-shell absolute inset-y-10 left-1 z-20 hidden w-18 overflow-hidden rounded-r-md md:block lg:left-2"
           >
+            <div className="intelligence-rail-line" />
             <div className="intelligence-rail-track flex flex-col">
               {[
-                "Technical Integration",
-                "Stakeholder Alignment",
-                "Delivery Confidence",
-                "Measured Outcomes",
-                "Technical Integration",
-                "Stakeholder Alignment",
-                "Delivery Confidence",
-                "Measured Outcomes",
+                "Technical",
+                "Alignment",
+                "Delivery",
+                "Outcomes",
+                "Technical",
+                "Alignment",
+                "Delivery",
+                "Outcomes",
               ].map((phrase, i) => (
                 <span
                   key={i}
-                  className="intelligence-rail-item whitespace-nowrap py-8 text-[11px] font-medium uppercase"
-                  style={{ writingMode: "vertical-lr" }}
+                  className="intelligence-rail-item whitespace-nowrap py-7 text-[11px] font-medium uppercase"
+                  style={{ writingMode: "vertical-rl" }}
                 >
                   {phrase}
                 </span>
@@ -47,7 +48,7 @@ export default async function HomePage() {
           </div>
 
           <Reveal>
-            <div className="hero-parallax-group max-w-5xl pl-12 md:pl-16 lg:pl-20">
+            <div className="hero-parallax-group max-w-5xl pl-12 md:pl-18 lg:pl-24">
               <div className="hero-hud-grid" />
               <p className="text-xs font-semibold uppercase tracking-[0.34em] text-red-400">
                 {siteConfig.hero.eyebrow}

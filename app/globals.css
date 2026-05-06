@@ -883,22 +883,35 @@ footer .relative.overflow-hidden {
 
 /* ─── Intelligence Rail ────────────────────────────────── */
 
+.intelligence-rail-shell {
+  background: linear-gradient(to bottom, rgba(5, 5, 5, 0.48), rgba(5, 5, 5, 0.08), rgba(5, 5, 5, 0.48));
+}
+
+.intelligence-rail-line {
+  position: absolute;
+  right: 0.55rem;
+  top: 0.75rem;
+  bottom: 0.75rem;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, rgba(244, 244, 245, 0.24), transparent);
+}
+
 .intelligence-rail-track {
-  animation: intelligence-rail-scroll 20s linear infinite;
-  opacity: 0.62;
+  animation: intelligence-rail-scroll 18s linear infinite;
+  opacity: 0.78;
   transition: filter 0.4s ease, opacity 0.4s ease;
 }
 
 .intelligence-rail-track:hover {
   animation-play-state: paused;
-  filter: brightness(1.32);
-  opacity: 0.82;
+  filter: brightness(1.2);
+  opacity: 1;
 }
 
 .intelligence-rail-item {
-  color: rgba(244, 244, 245, 0.52);
-  letter-spacing: 0.12em;
-  text-shadow: 0 0 8px rgba(255, 255, 255, 0.16);
+  color: rgba(244, 244, 245, 0.66);
+  letter-spacing: 0.14em;
+  text-shadow: 0 0 7px rgba(255, 255, 255, 0.11);
 }
 
 @keyframes intelligence-rail-scroll {
