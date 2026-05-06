@@ -196,7 +196,7 @@ export default async function HomePage() {
         </Reveal>
       </Section>
 
-      <Section className="py-12 pb-24 lg:py-14 lg:pb-32" id="leadership">
+      <Section className="mb-10 py-12 pb-24 lg:mb-14 lg:py-14 lg:pb-32" id="leadership">
         <Reveal>
           <div className="flex items-end justify-between gap-4">
             <h2 className="text-4xl font-black uppercase">Leadership Preview</h2>
