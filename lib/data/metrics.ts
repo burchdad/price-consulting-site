@@ -7,10 +7,10 @@ export type MetricItem = {
 };
 
 export const metrics: MetricItem[] = [
-  { label: "Prime Contracts Awarded", value: 47, suffix: "", meta: "Since Inception" },
-  { label: "Employee Retention", value: 96, suffix: "%", meta: "Rolling 12-Month" },
-  { label: "Team Members", value: 320, suffix: "+", meta: "National Workforce" },
-  { label: "Contract Value", value: 180, prefix: "$", suffix: "M", meta: "FY 2026" },
-  { label: "Satisfaction", value: 99, suffix: "%", meta: "Client Surveys" },
-  { label: "Years in Business", value: 14, suffix: "", meta: "Continuously Operating" },
+  { label: "Years of Federal IT Experience", value: 20, suffix: "+", meta: "Acquisition to Closeout" },
+  { label: "Proposals Supported", value: 200, suffix: "+", meta: "Across Agencies & Primes" },
+  { label: "Agencies & Primes Advised", value: 30, suffix: "+", meta: "Civilian, DoD & IC" },
+  { label: "Client Win Rate Improvement", value: 35, suffix: "%", meta: "Avg. Across Advisory Engagements" },
+  { label: "Compliance Readiness Rate", value: 100, suffix: "%", meta: "FedRAMP / CMMC Engagements" },
+  { label: "Advisory Engagements", value: 150, suffix: "+", meta: "Project & Retainer-Based" },
 ];

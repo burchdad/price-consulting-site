@@ -17,10 +17,27 @@ export function ContactForm() {
         <input name="name" placeholder="Name" className="rounded-md border border-white/15 bg-black px-3 py-2 text-sm" required />
         <input name="email" type="email" placeholder="Email" className="rounded-md border border-white/15 bg-black px-3 py-2 text-sm" required />
       </div>
-      <input name="phone" placeholder="Phone" className="w-full rounded-md border border-white/15 bg-black px-3 py-2 text-sm" />
+      <input name="phone" placeholder="Phone (optional)" className="w-full rounded-md border border-white/15 bg-black px-3 py-2 text-sm" />
+      <input
+        name="opportunity"
+        placeholder="Opportunity or Program Name (e.g., Enterprise IT IDIQ, CMMC Readiness)"
+        className="w-full rounded-md border border-white/15 bg-black px-3 py-2 text-sm"
+      />
+      <div className="grid gap-4 sm:grid-cols-2">
+        <input
+          name="programTimeline"
+          placeholder="Timeline (e.g., RFP due in 60 days)"
+          className="rounded-md border border-white/15 bg-black px-3 py-2 text-sm"
+        />
+        <input
+          name="engagementScope"
+          placeholder="Engagement Type (e.g., Proposal review, Retainer)"
+          className="rounded-md border border-white/15 bg-black px-3 py-2 text-sm"
+        />
+      </div>
       <textarea
         name="message"
-        placeholder="How can we help?"
+        placeholder="Describe what you're working on and how we can help."
         className="min-h-36 w-full rounded-md border border-white/15 bg-black px-3 py-2 text-sm"
         required
       />
@@ -29,7 +46,7 @@ export function ContactForm() {
         disabled={pending}
         className="rounded-md bg-red-600 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-red-500 disabled:opacity-70"
       >
-        {pending ? "Submitting..." : "Submit"}
+        {pending ? "Submitting..." : "Request Consultation"}
       </button>
       {state.message ? (
         <p className={`text-sm ${state.success ? "text-emerald-400" : "text-red-400"}`}>{state.message}</p>

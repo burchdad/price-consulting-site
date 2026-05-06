@@ -6,33 +6,39 @@ export type TimelineItem = {
 
 export const timeline: TimelineItem[] = [
   {
-    year: "2012",
-    title: "Company Founded",
+    year: "2004",
+    title: "Federal IT Career Begins",
     detail:
-      "Launched with a focus on secure mission support and accountable delivery governance.",
+      "Began career supporting federal enterprise IT acquisitions and contract execution across civilian agency programs.",
   },
   {
-    year: "2015",
-    title: "First Prime Award",
+    year: "2009",
+    title: "Proposal & Acquisition Specialization",
     detail:
-      "Secured initial prime contract for enterprise operations modernization.",
+      "Developed deep expertise in proposal strategy, source selection support, and FAR-compliant acquisition planning for large IT procurements.",
   },
   {
-    year: "2018",
-    title: "Technical Expansion",
+    year: "2014",
+    title: "Security & Compliance Focus",
     detail:
-      "Built dedicated engineering and cyber practice for mission-critical systems.",
+      "Expanded into NIST 800-53 compliance advisory, FedRAMP preparation, and DoD security requirements aligned to DFARS.",
   },
   {
-    year: "2021",
-    title: "National Footprint",
+    year: "2019",
+    title: "Price Consulting Established",
     detail:
-      "Scaled teams across multiple regions with partner-backed execution.",
+      "Launched Price Consulting to provide independent advisory services to agencies, primes, and subcontractors navigating complex federal IT procurements.",
+  },
+  {
+    year: "2024",
+    title: "CMMC & FedRAMP Advisory Practice",
+    detail:
+      "Built a dedicated advisory track for CMMC readiness and FedRAMP authorization support as demand across the defense industrial base accelerated.",
   },
   {
     year: "2026",
-    title: "Enterprise Scale",
+    title: "Expanded Govcon Advisory Reach",
     detail:
-      "Supporting enterprise and government portfolios with integrated delivery teams.",
+      "Now advising a broad spectrum of federal contracting stakeholders — from source selection planning through contract closeout and compliance sustainment.",
   },
 ];

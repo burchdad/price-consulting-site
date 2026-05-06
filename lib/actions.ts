@@ -54,11 +54,27 @@ export async function createContactSubmissionAction(
   _: ContactFormState,
   formData: FormData,
 ): Promise<ContactFormState> {
+  const opportunity = String(formData.get("opportunity") || "").trim();
+  const programTimeline = String(formData.get("programTimeline") || "").trim();
+  const engagementScope = String(formData.get("engagementScope") || "").trim();
+  const rawMessage = String(formData.get("message") || "").trim();
+
+  const contextLines: string[] = [];
+  if (opportunity) contextLines.push(`Opportunity / Program: ${opportunity}`);
+  if (programTimeline) contextLines.push(`Timeline: ${programTimeline}`);
+  if (engagementScope) contextLines.push(`Engagement Scope: ${engagementScope}`);
+  const message = contextLines.length
+    ? `${contextLines.join("\n")}\n\n${rawMessage}`
+    : rawMessage;
+
   const parsed = contactSchema.safeParse({
     name: formData.get("name"),
     email: formData.get("email"),
     phone: formData.get("phone") || undefined,
-    message: formData.get("message"),
+    opportunity: opportunity || undefined,
+    programTimeline: programTimeline || undefined,
+    engagementScope: engagementScope || undefined,
+    message,
   });
 
   if (!parsed.success) {
@@ -69,7 +85,8 @@ export async function createContactSubmissionAction(
     };
   }
 
-  await prisma.contactSubmission.create({ data: parsed.data });
+  const { opportunity: _opp, programTimeline: _ptl, engagementScope: _es, ...submissionData } = parsed.data;
+  await prisma.contactSubmission.create({ data: submissionData });
   revalidatePath("/admin/submissions");
 
   return {

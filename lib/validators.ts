@@ -9,6 +9,9 @@ export const contactSchema = z.object({
   name: z.string().min(2).max(120),
   email: z.string().email(),
   phone: z.string().max(30).optional(),
+  opportunity: z.string().max(500).optional(),
+  programTimeline: z.string().max(200).optional(),
+  engagementScope: z.string().max(200).optional(),
   message: z.string().min(10).max(4000),
 });
 

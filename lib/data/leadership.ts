@@ -6,47 +6,15 @@
 
 export const leadershipSeed = [
   {
-    name: "Morgan Hale",
-    title: "Chief Executive Officer",
+    name: "Principal Advisor",
+    title: "Founder & Principal Federal Contracting Advisor",
     photoUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a",
-    shortBio: "Leads enterprise mission strategy and client outcomes.",
+    shortBio:
+      "20+ years advising agencies, primes, and subcontractors on federal IT acquisition, proposal strategy, and contract execution.",
     fullBio:
-      "Morgan has led mission programs for over two decades, scaling delivery teams and strategic partnerships. Focuses on disciplined execution, transparent governance, and long-term mission impact.",
+      "Price Consulting was founded by a federal contracting professional with over 20 years of direct experience across the full government contracting lifecycle — from pre-solicitation acquisition planning through contract closeout and option period renewals.\n\nHaving worked alongside government contracting officers, program managers, prime contractors, and subcontractors, the firm brings a uniquely balanced perspective: understanding what agencies need from their procurements and what contractors must do to win and perform.\n\nCore expertise spans federal IT acquisition strategy, SOW and PWS development, proposal management and compliance, FAR/DFARS contract administration, and security compliance advisory for NIST 800-53, 800-171, FedRAMP, and CMMC. Every engagement is grounded in real-world execution — not theoretical frameworks — and scoped specifically to the client's procurement environment and risk profile.",
     linkedInUrl: "https://www.linkedin.com",
     displayOrder: 1,
-    isPublished: true,
-  },
-  {
-    name: "Taylor Brooks",
-    title: "Chief Operating Officer",
-    photoUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d",
-    shortBio: "Owns program operations and quality delivery standards.",
-    fullBio:
-      "Taylor oversees enterprise operations, ensuring contract performance aligns with mission priorities and compliance obligations. Has driven operational turnarounds for complex portfolios.",
-    linkedInUrl: "https://www.linkedin.com",
-    displayOrder: 2,
-    isPublished: true,
-  },
-  {
-    name: "Jordan Quinn",
-    title: "Chief Technology Officer",
-    photoUrl: "https://images.unsplash.com/photo-1541534401786-2077eed87a72",
-    shortBio: "Directs cloud, cyber, and data engineering innovation.",
-    fullBio:
-      "Jordan leads engineering and innovation programs spanning cloud migration, secure software delivery, and data modernization. Brings deep experience architecting mission-grade systems for regulated environments.",
-    linkedInUrl: "https://www.linkedin.com",
-    displayOrder: 3,
-    isPublished: true,
-  },
-  {
-    name: "Avery Reed",
-    title: "Vice President, Mission Support",
-    photoUrl: "https://images.unsplash.com/photo-1494790108377-be9c29b29330",
-    shortBio: "Leads logistics and field support readiness programs.",
-    fullBio:
-      "Avery has delivered mission support and logistics capabilities across global deployments, with emphasis on readiness analytics and operational continuity for critical programs.",
-    linkedInUrl: "https://www.linkedin.com",
-    displayOrder: 4,
     isPublished: true,
   },
 ];

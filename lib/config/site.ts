@@ -15,44 +15,68 @@
  */
 
 export const siteConfig = {
-  companyName: "Your Company",
-  tagline: "Engineered for Mission Outcomes",
+  companyName: "Price Consulting",
+  tagline: "Federal Contracting Advisory",
 
   hero: {
-    eyebrow: "Enterprise Mission Delivery",
-    headline: "Engineered for National Mission Outcomes",
+    eyebrow: "Federal Contracting Advisory",
+    headline: "Clarity, Compliance, and Delivery Discipline",
     subtext:
-      "Integrated professional services, engineering delivery, and mission support logistics for organizations requiring precision, speed, and accountability.",
+      "Price Consulting advises agencies, primes, and subcontractors on federal IT acquisition, proposal strategy, and mission-critical program execution where compliance, clarity, and delivery discipline are non-negotiable.",
+    supportingLine:
+      "Over two decades of experience supporting enterprise IT procurements, proposal development, and contract execution across high-consequence federal environments.",
     trustBadge:
-      "Procurement-ready delivery teams trusted by mission-critical stakeholders",
-    ctaPrimary: "Get in Touch",
+      "Trusted by agencies, primes, and subcontractors across the federal marketplace",
+    ctaPrimary: "Request a Consultation",
     ctaSecondary: "Explore Capabilities",
   },
 
   about: {
     missionStatement:
-      "Deliver trusted, secure, and high-performance services that improve mission outcomes.",
+      "Provide agencies, primes, and subcontractors with the acquisition expertise, proposal discipline, and contract execution rigor needed to win and perform in the federal marketplace.",
     visionStatement:
-      "Be the partner known for precision execution, innovation, and operational resilience.",
+      "Be the trusted advisor federal contracting professionals rely on when the stakes are high and the margin for error is zero.",
     values: [
-      "Integrity",
-      "Stewardship",
-      "Excellence",
+      "Compliance",
+      "Clarity",
       "Accountability",
-      "Collaboration",
+      "Precision",
+      "Trust",
     ],
     paragraphs: [
-      "Your Company is a mission-oriented enterprise delivering technical and operational excellence across complex environments.",
-      "Our teams bring disciplined execution, transparent reporting, and measurable performance outcomes to every engagement.",
-      "From acquisition support to engineering modernization and logistics readiness, we align each workstream to client mission priorities.",
-      "We are built to scale responsibly with a culture rooted in accountability and stewardship.",
+      "Price Consulting brings over 20 years of hands-on federal IT contracting experience to every engagement — from acquisition strategy and proposal development to contract administration and security compliance.",
+      "Our advisory work spans the full federal contracting lifecycle. We work with government agencies structuring procurements, with primes navigating complex IDIQs and GWACs, and with subcontractors building competitive bid strategies.",
+      "Every recommendation is grounded in real-world execution. We don't offer theoretical frameworks — we provide practical guidance built on direct experience with FAR/DFARS compliance, source selection, SOW development, and program delivery.",
+      "Whether you're preparing a proposal, untangling a contract dispute, or building a compliance posture for CMMC or FedRAMP, Price Consulting delivers focused, authoritative guidance that improves outcomes.",
+    ],
+    whyWorkWithUs: [
+      {
+        title: "20+ Years Federal IT Contracting Experience",
+        detail:
+          "Direct experience across acquisition planning, proposal development, contract administration, and security compliance in federal environments.",
+      },
+      {
+        title: "Practical Compliance Approach",
+        detail:
+          "FAR/DFARS, NIST 800-53, CMMC, and FedRAMP guidance that is operationally grounded — not checkbox-driven.",
+      },
+      {
+        title: "Results-Focused Execution",
+        detail:
+          "Every engagement is scoped to reduce procurement delays, strengthen awardability, and improve contract performance — not generate deliverables.",
+      },
+      {
+        title: "Trusted Across the Federal Marketplace",
+        detail:
+          "Advisory experience spanning civilian agencies, DoD program offices, large prime contractors, and small business subcontractors.",
+      },
     ],
   },
 
   contact: {
-    email: "info@company.com",
+    email: "info@priceconsulting.com",
     phone: "+1-800-000-0000",
-    address: "123 Enterprise Way, Washington, DC 20001",
+    address: "Washington, DC Metro Area",
   },
 
   social: {
@@ -60,45 +84,45 @@ export const siteConfig = {
   },
 
   footer: {
-    statement: "Mission-grade delivery for enterprise operations.",
+    statement: "Elite federal contracting advisory for high-stakes acquisition environments.",
     ctaHeadline:
-      "Connect with Your Company to align procurement-ready teams to mission-critical outcomes.",
-    ctaButtonLabel: "Schedule Briefing",
+      "Ready to strengthen your acquisition strategy, proposal, or compliance posture? Let's talk.",
+    ctaButtonLabel: "Request a Consultation",
   },
 
   globalImpact: {
-    eyebrow: "Global Impact",
-    headline: "Operational Reach Across High-Consequence Environments",
-    body: "Our teams support operations across multi-location programs, integrating local execution with centralized controls and contract-level transparency.",
+    eyebrow: "Experience & Reach",
+    headline: "Deep Federal Contracting Expertise Across the Marketplace",
+    body: "Two decades of advisory engagement spanning civilian agencies, DoD program offices, large primes, and small businesses — with measurable outcomes across every phase of the federal contracting lifecycle.",
     stats: [
-      { label: "Countries", value: "22" },
-      { label: "Operating Sites", value: "64" },
-      { label: "Mission Programs", value: "35" },
+      { label: "Years of Experience", value: "20+" },
+      { label: "Agencies & Primes Advised", value: "30+" },
+      { label: "Proposals Supported", value: "200+" },
     ],
   },
 
   whoWeAre: {
-    eyebrow: "Who We Are",
-    headline: "A High-Trust Enterprise Delivery Partner",
-    body: "We combine enterprise program leadership, secure engineering execution, and mission logistics capabilities into one accountable operating model. Every engagement is built around measurable outcomes, contract confidence, and mission continuity.",
-    linkLabel: "Learn More About Us",
+    eyebrow: "Why Price Consulting",
+    headline: "A High-Trust Federal Contracting Advisor",
+    body: "Price Consulting combines acquisition expertise, proposal discipline, and contract execution rigor into focused advisory engagements. Every recommendation is built on real federal contracting experience — not generic consulting frameworks.",
+    linkLabel: "Learn More",
   },
 
   careers: {
-    headline: "Careers",
+    headline: "Work With Us",
     subtext:
-      "Join a team that builds mission-ready systems and supports programs that matter.",
+      "Price Consulting occasionally partners with experienced federal contracting professionals for project-based engagements. If you bring deep govcon expertise and a results-first approach, we'd like to hear from you.",
     perks: [
-      "Competitive Compensation",
-      "Health Benefits",
-      "Growth and Certification Support",
-      "Mission-Driven Work",
+      "Federal Contracting Focus",
+      "Project-Based Flexibility",
+      "High-Impact Work",
+      "Expert Network Access",
     ],
   },
 
   meta: {
-    title: "Ghost Enterprise Authority Platform",
+    title: "Price Consulting — Federal Contracting Advisory",
     description:
-      "Enterprise-grade authority website and admin platform for mission-focused organizations.",
+      "Price Consulting advises agencies, primes, and subcontractors on federal IT acquisition, proposal strategy, and mission-critical program execution.",
   },
 };

@@ -87,18 +87,21 @@ export default async function HomePage() {
               <p className="mt-5 max-w-3xl text-base text-zinc-200 sm:text-lg">
                 {settings?.heroSubheadline ?? siteConfig.hero.subtext}
               </p>
+              <p className="mt-3 max-w-3xl text-sm text-zinc-400">
+                {siteConfig.hero.supportingLine}
+              </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <Link
                   href="/contact"
                   className="premium-button rounded-md bg-red-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-red-500"
                 >
-                  Get in Touch
+                  {siteConfig.hero.ctaPrimary}
                 </Link>
                 <Link
                   href="/case-studies"
                   className="premium-button rounded-md border border-white/20 px-5 py-3 text-sm font-semibold text-zinc-100 transition hover:border-red-500/70 hover:text-red-300"
                 >
-                  Explore Capabilities
+                  {siteConfig.hero.ctaSecondary}
                 </Link>
               </div>
 
