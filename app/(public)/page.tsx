@@ -36,13 +36,11 @@ export default async function HomePage() {
                 "Delivery",
                 "Outcomes",
               ].map((phrase, i) => (
-                <span
-                  key={i}
-                  className="intelligence-rail-item whitespace-nowrap py-7 text-[11px] font-medium uppercase"
-                  style={{ writingMode: "vertical-rl" }}
-                >
-                  {phrase}
-                </span>
+                <div key={i} className="intelligence-rail-slot">
+                  <span className="intelligence-rail-item whitespace-nowrap text-[11px] font-medium uppercase">
+                    {phrase}
+                  </span>
+                </div>
               ))}
             </div>
           </div>
