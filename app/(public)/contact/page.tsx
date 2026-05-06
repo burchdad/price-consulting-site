@@ -7,7 +7,7 @@ export default async function ContactPage() {
 
   return (
     <main>
-      <Section>
+      <Section className="py-16 lg:py-20">
         <p className="text-xs font-semibold uppercase tracking-[0.28em] text-red-400">Start the Conversation</p>
         <h1 className="mt-3 text-5xl font-black uppercase">Request a Consultation</h1>
         <p className="mt-4 max-w-3xl text-zinc-300">

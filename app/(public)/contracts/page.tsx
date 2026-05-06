@@ -6,8 +6,8 @@ export default async function ContractsPage() {
 
   return (
     <main>
-      <Section>
-        <h1 className="text-5xl font-black uppercase">Contract Vehicles & Procurement Access</h1>
+      <Section className="py-16 lg:py-20">
+        <h1 className="text-5xl font-black uppercase">Contract Vehicles &amp; Procurement Access</h1>
         <p className="mt-4 max-w-3xl text-zinc-300">Our contract portfolio enables agencies and partners to engage quickly with proven delivery teams.</p>
       </Section>
 

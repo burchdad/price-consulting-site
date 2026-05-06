@@ -8,8 +8,7 @@ export default async function AboutPage() {
 
   return (
     <main>
-      <Section>
-        <p className="text-xs font-semibold uppercase tracking-[0.28em] text-red-400">About Price Consulting</p>
+      <Section className="py-16 lg:py-20">
         <h1 className="mt-3 text-5xl font-black uppercase">
           {settings?.companyName ?? siteConfig.companyName}: Federal Contracting Advisory
         </h1>

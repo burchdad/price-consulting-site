@@ -87,7 +87,7 @@ export default async function HomePage() {
         </Section>
       </section>
 
-      <Section className="py-10 lg:py-12">
+      <Section className="py-12 lg:py-14">
         <Reveal staggerChildren>
           <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-6">
             {metrics.map((item, index) => (
@@ -114,7 +114,7 @@ export default async function HomePage() {
         </Reveal>
       </Section>
 
-      <Section className="floating-panel grid gap-8 py-12 lg:grid-cols-2 lg:py-14">
+      <Section className="floating-panel grid gap-8 py-12 lg:grid-cols-2 lg:py-14" id="global-impact">
         <Reveal className="h-full">
           <p className="text-xs uppercase tracking-[0.2em] text-red-400">
             {siteConfig.globalImpact.eyebrow}
@@ -145,7 +145,7 @@ export default async function HomePage() {
         </Reveal>
       </Section>
 
-      <Section className="relative py-12 lg:py-14">
+      <Section className="relative py-12 lg:py-14" id="who-we-are">
         <div className="absolute inset-0 rounded-2xl border border-white/5 bg-[linear-gradient(120deg,rgba(255,43,43,0.08),transparent_35%)]" />
         <Reveal>
           <p className="relative text-xs uppercase tracking-[0.25em] text-red-400">
@@ -166,7 +166,7 @@ export default async function HomePage() {
         </Reveal>
       </Section>
 
-      <Section className="section-divider py-12 lg:py-14">
+      <Section className="section-divider py-12 lg:py-14" id="timeline">
         <Reveal>
           <h2 className="text-4xl font-black uppercase">Company Growth Timeline</h2>
           <div className="timeline-rail relative mt-8 hidden grid-cols-5 gap-4 lg:grid">
@@ -196,7 +196,7 @@ export default async function HomePage() {
         </Reveal>
       </Section>
 
-      <Section className="py-12 pb-18 lg:py-14 lg:pb-24">
+      <Section className="py-12 pb-24 lg:py-14 lg:pb-32" id="leadership">
         <Reveal>
           <div className="flex items-end justify-between gap-4">
             <h2 className="text-4xl font-black uppercase">Leadership Preview</h2>

@@ -24,7 +24,7 @@ export default async function ServicesPage() {
 
   return (
     <main>
-      <Section className="py-12 lg:py-14">
+      <Section className="py-16 lg:py-20">
         <Reveal>
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-red-400">
             Federal Capabilities
@@ -38,7 +38,7 @@ export default async function ServicesPage() {
         </Reveal>
       </Section>
 
-      <Section className="floating-panel pb-12 lg:pb-14">
+      <Section className="floating-panel py-12 lg:py-16">
         <Reveal>
           <div className="space-y-4">
             {servicesToRender.map((service, index) => (
