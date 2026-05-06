@@ -2,13 +2,10 @@ import Link from "next/link";
 import {
   ArrowRight,
   BadgeCheck,
-  BriefcaseBusiness,
   ChevronDown,
-  CircuitBoard,
   Handshake,
   Quote,
   ShieldCheck,
-  Truck,
 } from "lucide-react";
 import { Section } from "@/components/ui/section";
 import { AnimatedCounter } from "@/components/public/animated-counter";
@@ -18,19 +15,7 @@ import { getPublishedData } from "@/lib/site-data";
 import { siteConfig } from "@/lib/config/site";
 import { timeline } from "@/lib/data/timeline";
 import { metrics } from "@/lib/data/metrics";
-import { fallbackServices } from "@/lib/data/services";
 import { fallbackPartners } from "@/lib/data/partners";
-
-function categoryIcon(category: string) {
-  const normalized = category.toLowerCase();
-  if (normalized.includes("engineering") || normalized.includes("technology")) {
-    return <CircuitBoard size={18} />;
-  }
-  if (normalized.includes("mission") || normalized.includes("logistics")) {
-    return <Truck size={18} />;
-  }
-  return <BriefcaseBusiness size={18} />;
-}
 
 function contractTags(contractType: string) {
   const normalized = contractType.toLowerCase();
@@ -58,7 +43,6 @@ function caseOutcomeBadge(study: { metrics: unknown; results: string }) {
 export default async function HomePage() {
   const {
     settings,
-    services,
     partners,
     contracts,
     cases,
@@ -67,7 +51,6 @@ export default async function HomePage() {
     jobs,
   } = await getPublishedData();
 
-  const servicesToRender = services.length ? services : fallbackServices;
   const partnersToRender = partners.length ? partners : fallbackPartners;
 
   return (
@@ -297,39 +280,25 @@ export default async function HomePage() {
         </Reveal>
       </Section>
 
-      <Section
-        id="services"
-        className="floating-panel py-12 lg:py-14"
-      >
+      <Section className="py-12 lg:py-14">
         <Reveal>
-          <h2 className="text-4xl font-black uppercase">Core Services</h2>
-          <div className="mt-8 space-y-4">
-            {servicesToRender.map((service, index) => (
-              <Reveal key={service.id} delay={0.07 + index * 0.05}>
-                <article className="service-module relative grid gap-7 border-t border-white/10 pt-7 lg:grid-cols-[360px_1fr]">
-                  <div className="space-y-4">
-                    <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-black/40 px-3 py-1 text-xs text-zinc-200">
-                      {categoryIcon(service.category)}
-                      {service.category}
-                    </div>
-                    <h3 className="text-3xl font-black uppercase leading-tight lg:text-4xl">{service.title}</h3>
-                  </div>
-                  <div>
-                    <p className="text-zinc-300">{service.description}</p>
-                    <ul className="mt-4 grid gap-2 text-sm text-zinc-300 sm:grid-cols-2">
-                      {(service.bulletItems as string[]).map((item) => (
-                        <li
-                          key={item}
-                          className="service-capability rounded-md border border-white/10 bg-black/30 px-3 py-2"
-                        >
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </article>
-              </Reveal>
-            ))}
+          <div className="floating-panel flex flex-col items-start justify-between gap-5 p-6 lg:flex-row lg:items-center">
+            <div>
+              <p className="text-xs uppercase tracking-[0.22em] text-red-400">Services</p>
+              <h2 className="mt-2 text-3xl font-black uppercase lg:text-4xl">
+                Core Services Now Live on a Dedicated Page
+              </h2>
+              <p className="mt-2 max-w-3xl text-sm text-zinc-300">
+                Explore full federal acquisition, proposal, contract management,
+                and security advisory capabilities in one focused view.
+              </p>
+            </div>
+            <Link
+              href="/services"
+              className="premium-button rounded-md border border-white/20 px-5 py-3 text-sm font-semibold text-zinc-100 transition hover:border-red-500/70 hover:text-red-300"
+            >
+              Explore Services
+            </Link>
           </div>
         </Reveal>
       </Section>
