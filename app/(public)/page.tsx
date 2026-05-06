@@ -4,7 +4,6 @@ import { Section } from "@/components/ui/section";
 import { AnimatedCounter } from "@/components/public/animated-counter";
 import { Reveal } from "@/components/public/reveal";
 import { HomepageCinematicScene } from "@/components/public/homepage-cinematic-scene";
-import { HeroKeywordCarousel } from "@/components/public/hero-keyword-carousel";
 import { OperationalGraph } from "@/components/public/operational-graph";
 import { getPublishedData } from "@/lib/site-data";
 import { siteConfig } from "@/lib/config/site";
@@ -18,6 +17,31 @@ export default async function HomePage() {
     <HomepageCinematicScene>
       <section className="relative isolate border-b border-white/10">
         <div className="absolute inset-0 bg-gradient-to-b from-black/48 via-black/70 to-black/32" />
+
+        {/* Intelligence Rail – vertical ambient ticker on left edge of hero */}
+        <div aria-hidden className="pointer-events-none absolute inset-y-0 left-0 z-20 hidden w-5 overflow-hidden lg:block">
+          <div className="intelligence-rail-track pointer-events-auto flex flex-col opacity-20">
+            {[
+              "Technical Integration",
+              "Stakeholder Alignment",
+              "Delivery Confidence",
+              "Measured Outcomes",
+              "Technical Integration",
+              "Stakeholder Alignment",
+              "Delivery Confidence",
+              "Measured Outcomes",
+            ].map((phrase, i) => (
+              <span
+                key={i}
+                className="whitespace-nowrap py-7 text-[9px] font-medium uppercase tracking-[0.22em] text-zinc-300"
+                style={{ writingMode: "vertical-lr" }}
+              >
+                {phrase}
+              </span>
+            ))}
+          </div>
+        </div>
+
         <Section className="relative z-10 py-20 lg:py-24">
           <Reveal>
             <div className="hero-parallax-group max-w-5xl">
@@ -62,8 +86,6 @@ export default async function HomePage() {
           </Reveal>
         </Section>
       </section>
-
-      <HeroKeywordCarousel />
 
       <Section className="py-10 lg:py-12">
         <Reveal staggerChildren>

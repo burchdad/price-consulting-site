@@ -875,4 +875,30 @@ footer .relative.overflow-hidden {
     transform: rotate(0deg);
     opacity: 0.08;
   }
+
+  .intelligence-rail-track {
+    animation: none;
+  }
+}
+
+/* ─── Intelligence Rail ────────────────────────────────── */
+
+.intelligence-rail-track {
+  animation: intelligence-rail-scroll 20s linear infinite;
+  transition: filter 0.4s ease, opacity 0.4s ease;
+}
+
+.intelligence-rail-track:hover {
+  animation-play-state: paused;
+  filter: brightness(1.55);
+  opacity: 0.38;
+}
+
+@keyframes intelligence-rail-scroll {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50%);
+  }
 }
