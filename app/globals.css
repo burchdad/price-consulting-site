@@ -885,13 +885,20 @@ footer .relative.overflow-hidden {
 
 .intelligence-rail-track {
   animation: intelligence-rail-scroll 20s linear infinite;
+  opacity: 0.62;
   transition: filter 0.4s ease, opacity 0.4s ease;
 }
 
 .intelligence-rail-track:hover {
   animation-play-state: paused;
-  filter: brightness(1.55);
-  opacity: 0.38;
+  filter: brightness(1.32);
+  opacity: 0.82;
+}
+
+.intelligence-rail-item {
+  color: rgba(244, 244, 245, 0.52);
+  letter-spacing: 0.12em;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.16);
 }
 
 @keyframes intelligence-rail-scroll {

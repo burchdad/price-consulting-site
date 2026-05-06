@@ -22,9 +22,9 @@ export default async function HomePage() {
           {/* Intelligence Rail – vertical ambient ticker beside hero content */}
           <div
             aria-hidden
-            className="absolute inset-y-8 left-0 z-20 hidden w-10 overflow-hidden border-r border-white/10 md:block"
+            className="absolute inset-y-8 left-0 z-20 hidden w-14 overflow-hidden rounded-r-md border-r border-white/20 bg-gradient-to-b from-black/35 via-black/10 to-black/35 md:block"
           >
-            <div className="intelligence-rail-track flex flex-col opacity-25">
+            <div className="intelligence-rail-track flex flex-col">
               {[
                 "Technical Integration",
                 "Stakeholder Alignment",
@@ -37,7 +37,7 @@ export default async function HomePage() {
               ].map((phrase, i) => (
                 <span
                   key={i}
-                  className="whitespace-nowrap py-8 text-[10px] font-medium uppercase tracking-[0.2em] text-zinc-200"
+                  className="intelligence-rail-item whitespace-nowrap py-8 text-[11px] font-medium uppercase"
                   style={{ writingMode: "vertical-lr" }}
                 >
                   {phrase}
@@ -47,7 +47,7 @@ export default async function HomePage() {
           </div>
 
           <Reveal>
-            <div className="hero-parallax-group max-w-5xl pl-10 md:pl-14 lg:pl-16">
+            <div className="hero-parallax-group max-w-5xl pl-12 md:pl-16 lg:pl-20">
               <div className="hero-hud-grid" />
               <p className="text-xs font-semibold uppercase tracking-[0.34em] text-red-400">
                 {siteConfig.hero.eyebrow}
