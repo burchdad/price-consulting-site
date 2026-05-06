@@ -4,6 +4,7 @@ import { Section } from "@/components/ui/section";
 import { AnimatedCounter } from "@/components/public/animated-counter";
 import { Reveal } from "@/components/public/reveal";
 import { HomepageCinematicScene } from "@/components/public/homepage-cinematic-scene";
+import { HeroKeywordCarousel } from "@/components/public/hero-keyword-carousel";
 import { OperationalGraph } from "@/components/public/operational-graph";
 import { getPublishedData } from "@/lib/site-data";
 import { siteConfig } from "@/lib/config/site";
@@ -61,6 +62,8 @@ export default async function HomePage() {
           </Reveal>
         </Section>
       </section>
+
+      <HeroKeywordCarousel />
 
       <Section className="py-10 lg:py-12">
         <Reveal staggerChildren>
@@ -171,7 +174,7 @@ export default async function HomePage() {
         </Reveal>
       </Section>
 
-      <Section className="py-12 lg:py-14">
+      <Section className="py-12 pb-18 lg:py-14 lg:pb-24">
         <Reveal>
           <div className="flex items-end justify-between gap-4">
             <h2 className="text-4xl font-black uppercase">Leadership Preview</h2>

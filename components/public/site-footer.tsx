@@ -76,12 +76,6 @@ export async function SiteFooter() {
           </div>
         </div>
       </div>
-
-      <div className="relative overflow-hidden border-t border-white/10">
-        <p className="mx-auto max-w-7xl px-4 py-2 text-[72px] font-black uppercase tracking-[0.16em] text-white/8 sm:text-[96px] lg:px-8 lg:text-[124px]">
-          AUTHORITY
-        </p>
-      </div>
     </footer>
   );
 }
