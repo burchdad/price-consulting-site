@@ -18,33 +18,36 @@ export default async function HomePage() {
       <section className="relative isolate border-b border-white/10">
         <div className="absolute inset-0 bg-gradient-to-b from-black/48 via-black/70 to-black/32" />
 
-        {/* Intelligence Rail – vertical ambient ticker on left edge of hero */}
-        <div aria-hidden className="pointer-events-none absolute inset-y-0 left-0 z-20 hidden w-5 overflow-hidden lg:block">
-          <div className="intelligence-rail-track pointer-events-auto flex flex-col opacity-20">
-            {[
-              "Technical Integration",
-              "Stakeholder Alignment",
-              "Delivery Confidence",
-              "Measured Outcomes",
-              "Technical Integration",
-              "Stakeholder Alignment",
-              "Delivery Confidence",
-              "Measured Outcomes",
-            ].map((phrase, i) => (
-              <span
-                key={i}
-                className="whitespace-nowrap py-7 text-[9px] font-medium uppercase tracking-[0.22em] text-zinc-300"
-                style={{ writingMode: "vertical-lr" }}
-              >
-                {phrase}
-              </span>
-            ))}
-          </div>
-        </div>
-
         <Section className="relative z-10 py-20 lg:py-24">
+          {/* Intelligence Rail – vertical ambient ticker beside hero content */}
+          <div
+            aria-hidden
+            className="absolute inset-y-8 left-0 z-20 hidden w-10 overflow-hidden border-r border-white/10 md:block"
+          >
+            <div className="intelligence-rail-track flex flex-col opacity-25">
+              {[
+                "Technical Integration",
+                "Stakeholder Alignment",
+                "Delivery Confidence",
+                "Measured Outcomes",
+                "Technical Integration",
+                "Stakeholder Alignment",
+                "Delivery Confidence",
+                "Measured Outcomes",
+              ].map((phrase, i) => (
+                <span
+                  key={i}
+                  className="whitespace-nowrap py-8 text-[10px] font-medium uppercase tracking-[0.2em] text-zinc-200"
+                  style={{ writingMode: "vertical-lr" }}
+                >
+                  {phrase}
+                </span>
+              ))}
+            </div>
+          </div>
+
           <Reveal>
-            <div className="hero-parallax-group max-w-5xl">
+            <div className="hero-parallax-group max-w-5xl pl-10 md:pl-14 lg:pl-16">
               <div className="hero-hud-grid" />
               <p className="text-xs font-semibold uppercase tracking-[0.34em] text-red-400">
                 {siteConfig.hero.eyebrow}
