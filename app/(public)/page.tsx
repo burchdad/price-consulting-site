@@ -239,28 +239,6 @@ export default async function HomePage() {
         </Reveal>
       </Section>
 
-      <Section className="py-12 lg:py-14">
-        <Reveal>
-          <div className="floating-panel-accent p-8 text-center">
-            <p className="text-xs uppercase tracking-[0.22em] text-red-200">
-              Start the Conversation
-            </p>
-            <h2 className="mt-3 text-4xl font-black uppercase sm:text-5xl">
-              Let&apos;s Build the Future Together
-            </h2>
-            <p className="mx-auto mt-3 max-w-2xl text-zinc-200">
-              Partner with a delivery organization designed for mission continuity,
-              enterprise rigor, and measurable outcomes.
-            </p>
-            <Link
-              href="/contact"
-              className="premium-button mt-7 inline-flex rounded-md bg-red-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-red-500"
-            >
-              Contact Our Team
-            </Link>
-          </div>
-        </Reveal>
-      </Section>
     </HomepageCinematicScene>
   );
 }
