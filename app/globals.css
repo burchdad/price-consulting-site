@@ -331,6 +331,16 @@ a {
   background: linear-gradient(180deg, rgba(5,5,5,0.72) 0%, rgba(8,8,8,0.88) 50%, rgba(5,5,5,0.72) 100%);
 }
 
+/* Who We Are band */
+.who-we-are-band {
+  background: linear-gradient(135deg, rgba(5,5,5,0.90) 0%, rgba(12,5,5,0.95) 50%, rgba(5,5,5,0.90) 100%);
+}
+
+/* Timeline band */
+.timeline-band {
+  background: linear-gradient(180deg, rgba(5,5,5,0.88) 0%, rgba(10,10,10,0.96) 60%, rgba(5,5,5,0.88) 100%);
+}
+
 /* Global impact dot-grid overlay */
 .impact-dot-grid {
   background-image: radial-gradient(rgba(255,255,255,0.12) 1px, transparent 1px);

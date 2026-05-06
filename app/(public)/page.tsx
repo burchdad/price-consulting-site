@@ -5,6 +5,7 @@ import { AnimatedCounter } from "@/components/public/animated-counter";
 import { Reveal } from "@/components/public/reveal";
 import { HomepageCinematicScene } from "@/components/public/homepage-cinematic-scene";
 import { OperationalGraph } from "@/components/public/operational-graph";
+import { TimelineScroller } from "@/components/public/timeline-scroller";
 import { getPublishedData } from "@/lib/site-data";
 import { siteConfig } from "@/lib/config/site";
 import { timeline } from "@/lib/data/timeline";
@@ -169,56 +170,54 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <Section className="relative py-12 lg:py-14" id="who-we-are">
-        <div className="absolute inset-0 rounded-2xl border border-white/5 bg-[linear-gradient(120deg,rgba(255,43,43,0.08),transparent_35%)]" />
-        <Reveal>
-          <p className="relative text-xs uppercase tracking-[0.25em] text-red-400">
-            {siteConfig.whoWeAre.eyebrow}
-          </p>
-          <h2 className="relative mt-3 max-w-5xl text-4xl font-black uppercase leading-tight sm:text-5xl">
-            {siteConfig.whoWeAre.headline}
-          </h2>
-          <p className="relative mt-5 max-w-4xl text-zinc-300">
-            {siteConfig.whoWeAre.body}
-          </p>
-          <Link
-            href="/about"
-            className="relative mt-7 inline-flex items-center gap-2 text-sm font-semibold text-red-300 hover:text-red-200"
-          >
-            {siteConfig.whoWeAre.linkLabel} <ArrowRight size={16} />
-          </Link>
-        </Reveal>
-      </Section>
+      {/* ── WHO WE ARE – full-bleed ──────────────────────────────────── */}
+      <section className="full-bleed-band who-we-are-band relative overflow-hidden py-20 lg:py-28" id="who-we-are">
+        <div aria-hidden className="pointer-events-none absolute inset-0">
+          {/* large ghost wordmark */}
+          <span className="absolute -bottom-6 right-4 select-none text-[11rem] font-black uppercase leading-none tracking-tighter text-white/[0.025] lg:text-[18rem]">
+            TRUST
+          </span>
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_15%_50%,rgba(255,43,43,0.07),transparent_70%)]" />
+          <div aria-hidden className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+        </div>
+        <div className="relative mx-auto max-w-screen-xl px-6 xl:px-16">
+          <Reveal>
+            <p className="text-xs uppercase tracking-[0.25em] text-red-400">
+              {siteConfig.whoWeAre.eyebrow}
+            </p>
+            <h2 className="mt-3 max-w-5xl text-4xl font-black uppercase leading-tight sm:text-5xl lg:text-6xl">
+              {siteConfig.whoWeAre.headline}
+            </h2>
+            <p className="mt-5 max-w-3xl text-lg text-zinc-300">
+              {siteConfig.whoWeAre.body}
+            </p>
+            <Link
+              href="/about"
+              className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-red-300 hover:text-red-200"
+            >
+              {siteConfig.whoWeAre.linkLabel} <ArrowRight size={16} />
+            </Link>
+          </Reveal>
+        </div>
+      </section>
 
-      <Section className="section-divider py-12 lg:py-14" id="timeline">
-        <Reveal>
-          <h2 className="text-4xl font-black uppercase">Company Growth Timeline</h2>
-          <div className="timeline-rail relative mt-8 hidden grid-cols-5 gap-4 lg:grid">
-            {timeline.map((item, index) => (
-              <Reveal key={item.year} delay={0.08 + index * 0.07}>
-                <article className="timeline-card group relative rounded-xl border border-white/10 bg-white/[0.02] p-5">
-                  <div className="timeline-marker" />
-                  <p className="text-sm font-bold tracking-[0.08em] text-red-400">{item.year}</p>
-                  <h3 className="mt-2 text-xl font-bold uppercase">{item.title}</h3>
-                  <p className="mt-3 text-sm text-zinc-300">{item.detail}</p>
-                </article>
-              </Reveal>
-            ))}
+      {/* ── TIMELINE – full-bleed animated scroller ─────────────────── */}
+      <section className="full-bleed-band timeline-band relative overflow-hidden py-20 lg:py-28" id="timeline">
+        <div aria-hidden className="pointer-events-none absolute inset-0">
+          <div className="absolute inset-0 bg-gradient-to-b from-zinc-950/60 via-black/80 to-zinc-950/60" />
+          <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-red-500/40 to-transparent" />
+          <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-white/8 to-transparent" />
+        </div>
+        <div className="relative mx-auto max-w-screen-xl px-6 xl:px-16">
+          <Reveal>
+            <p className="text-xs uppercase tracking-[0.25em] text-red-400">Company History</p>
+            <h2 className="mt-2 text-4xl font-black uppercase lg:text-5xl">Growth Timeline</h2>
+          </Reveal>
+          <div className="mt-12">
+            <TimelineScroller items={timeline} />
           </div>
-
-          <div className="mt-5 space-y-3 lg:hidden">
-            {timeline.map((item, index) => (
-              <Reveal key={item.year} delay={0.04 + index * 0.05}>
-                <article className="timeline-card rounded-xl border border-white/10 bg-white/[0.02] p-4">
-                  <p className="text-sm font-bold text-red-400">{item.year}</p>
-                  <h3 className="mt-1 text-lg font-bold uppercase">{item.title}</h3>
-                  <p className="mt-2 text-sm text-zinc-300">{item.detail}</p>
-                </article>
-              </Reveal>
-            ))}
-          </div>
-        </Reveal>
-      </Section>
+        </div>
+      </section>
 
       <Section className="mb-10 py-12 pb-24 lg:mb-14 lg:py-14 lg:pb-32" id="leadership">
         <Reveal>
