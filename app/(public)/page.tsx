@@ -140,7 +140,11 @@ export default async function HomePage() {
           <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-black to-transparent" />
         </div>
 
-        <div className="relative mx-auto grid max-w-screen-xl gap-12 px-6 lg:grid-cols-2 lg:items-center xl:gap-20 xl:px-16">
+        <div className="relative mx-auto grid max-w-screen-xl gap-12 px-6 lg:grid-cols-[3fr_2fr] lg:items-center xl:gap-16 xl:px-16">
+          <Reveal delay={0.06} className="min-h-[480px]">
+            <OperationalGraph />
+          </Reveal>
+
           <Reveal>
             <p className="text-xs uppercase tracking-[0.2em] text-red-400">
               {siteConfig.globalImpact.eyebrow}
@@ -150,6 +154,9 @@ export default async function HomePage() {
             </h2>
             <p className="mt-4 max-w-xl text-zinc-300">
               {siteConfig.globalImpact.body}
+            </p>
+            <p className="mt-3 text-xs uppercase tracking-[0.16em] text-zinc-500">
+              Hover any node to explore
             </p>
             <div className="mt-8 grid gap-3 sm:grid-cols-3">
               {siteConfig.globalImpact.stats.map(({ label, value }) => (
@@ -164,10 +171,6 @@ export default async function HomePage() {
                 </div>
               ))}
             </div>
-          </Reveal>
-
-          <Reveal delay={0.06} className="min-h-[420px]">
-            <OperationalGraph />
           </Reveal>
         </div>
       </section>
