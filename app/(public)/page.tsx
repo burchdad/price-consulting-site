@@ -132,10 +132,12 @@ export default async function HomePage() {
         {/* Layered backgrounds */}
         <div aria-hidden className="pointer-events-none absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-br from-black via-zinc-950/90 to-red-950/20" />
-          {/* subtle dot grid */}
+          {/* subtle dot grid, fades out toward bottom */}
           <div className="impact-dot-grid absolute inset-0 opacity-[0.35]" />
           {/* red atmospheric glow on graph side */}
           <div className="absolute right-0 top-0 h-full w-1/2 bg-[radial-gradient(ellipse_at_75%_50%,rgba(255,43,43,0.14),transparent_60%)]" />
+          {/* bottom dissolve into next section */}
+          <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-black to-transparent" />
         </div>
 
         <div className="relative mx-auto grid max-w-screen-xl gap-12 px-6 lg:grid-cols-2 lg:items-center xl:gap-20 xl:px-16">
@@ -173,12 +175,13 @@ export default async function HomePage() {
       {/* ── WHO WE ARE – full-bleed ──────────────────────────────────── */}
       <section className="full-bleed-band who-we-are-band relative overflow-hidden py-20 lg:py-28" id="who-we-are">
         <div aria-hidden className="pointer-events-none absolute inset-0">
+          {/* top fade from black – matches global-impact bottom dissolve */}
+          <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-black to-transparent" />
           {/* large ghost wordmark */}
           <span className="absolute -bottom-6 right-4 select-none text-[11rem] font-black uppercase leading-none tracking-tighter text-white/[0.025] lg:text-[18rem]">
             TRUST
           </span>
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_15%_50%,rgba(255,43,43,0.07),transparent_70%)]" />
-          <div aria-hidden className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
         </div>
         <div className="relative mx-auto max-w-screen-xl px-6 xl:px-16">
           <Reveal>

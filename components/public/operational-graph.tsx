@@ -17,7 +17,7 @@ export function OperationalGraph() {
 
   return (
     <motion.div
-      className="floating-panel relative overflow-hidden p-5"
+      className="relative overflow-hidden"
       onMouseMove={(event) => {
         if (reduceMotion) return;
         const rect = event.currentTarget.getBoundingClientRect();
