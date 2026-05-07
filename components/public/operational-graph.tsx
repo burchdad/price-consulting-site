@@ -84,11 +84,6 @@ export function OperationalGraph() {
       animate={reduceMotion ? undefined : { x: parallax.x, y: parallax.y }}
       transition={{ type: "spring", stiffness: 45, damping: 20, mass: 0.8 }}
     >
-      {/* Grid overlay */}
-      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:28px_28px]" />
-      {/* Atmospheric glow */}
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_60%_30%,rgba(255,43,43,0.18),transparent_50%)]" />
-
       {/* Scan sweep */}
       <motion.div
         className="pointer-events-none absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-transparent via-red-500/[0.07] to-transparent"
@@ -144,25 +139,6 @@ export function OperationalGraph() {
             strokeDashoffset: { duration: 12, ease: "linear", repeat: Infinity },
           }}
         />
-
-        {/* Orbiting ellipse */}
-        <motion.g
-          animate={reduceMotion ? undefined : { rotate: [0, 2, 0] }}
-          transition={{ duration: 28, ease: "easeInOut", repeat: Infinity }}
-          style={{ transformOrigin: "350px 210px" }}
-        >
-          <motion.ellipse
-            cx="350"
-            cy="210"
-            rx="260"
-            ry="110"
-            stroke="rgba(255,255,255,0.15)"
-            strokeWidth="1"
-            fill="none"
-            animate={reduceMotion ? undefined : { opacity: [0.1, 0.22, 0.1] }}
-            transition={{ duration: 7, ease: "easeInOut", repeat: Infinity }}
-          />
-        </motion.g>
 
         {/* Nodes */}
         {NODE_DATA.map((node, index) => {
